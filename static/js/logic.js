@@ -54,7 +54,7 @@ d3.json(url).then(function(data) {
         let labels = [];
 
         // Title of Legend
-        div.innerHTML = "<h4>Magnitudes</h4>";
+        div.innerHTML = "<h4>Depths</h4>";
 
         // Loop through the limits to create the legend items
         for (let i = 0; i < limits.length; i++) {
