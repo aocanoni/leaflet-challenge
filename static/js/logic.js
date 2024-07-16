@@ -12,7 +12,7 @@ let url = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.ge
 
 // Function to set marker size based on magnitude
 function markerSize(magnitude) {
-    return Math.sqrt(magnitude) * 20000;
+    return Math.sqrt(magnitude) * 10000;
 }
 
 // Function to get color based on depth- from red to green
