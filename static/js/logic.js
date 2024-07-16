@@ -54,12 +54,12 @@ d3.json(url).then(function(data) {
         let labels = [];
 
         // Title of Legend
-        div.innerHTML = "<h4>Depths</h4>";
+        div.innerHTML = "<h4>Earthquake Depths</h4>";
 
         // Loop through the limits to create the legend items
         for (let i = 0; i < limits.length; i++) {
             let color = getColor(limits[i]);
-            let range = `${limits[i]} ${limits[i + 1] ? "&ndash;" + limits[i + 1]  : "+"}`;
+            let range = `${limits[i]} ${limits[i + 1] ? "&ndash; " + limits[i + 1]  : "+"}`;
 
             labels.push(
                 `<li style="display: flex; align-items: center;"><span style="background-color: ${color}; width: 20px; height: 20px; display: inline-block; margin-right: 5px;"></span>${range}</li>`
