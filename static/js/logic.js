@@ -53,19 +53,19 @@ d3.json(url).then(function(data) {
         let limits = [-10, 10, 30, 50, 70, 90];
         let labels = [];
 
-        // Title of Legend
+        // Title of legend
         div.innerHTML = "<h4>Earthquake Depths</h4>";
 
-        // Loop through the limits to create the legend items
+        // Loop to create the legend- ranges + colors
         for (let i = 0; i < limits.length; i++) {
             let color = getColor(limits[i]);
             let range = `${limits[i]} ${limits[i + 1] ? "&ndash; " + limits[i + 1]  : "+"}`;
-
+            // Formatting for legend- CSS
             labels.push(
                 `<li style="display: flex; align-items: center;"><span style="background-color: ${color}; width: 20px; height: 20px; display: inline-block; margin-right: 5px;"></span>${range}</li>`
             );
         }
-
+        // More formatting
         div.innerHTML += "<ul style='list-style-type: none; padding: 0; margin: 0;'>" + labels.join("") + "</ul>";
         return div;
     };
